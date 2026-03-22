@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.report-card {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 2rem !important;
+    overflow: hidden;
+}
+
+.card-header {
+    background: #4e73df !important;
+}
+
+.form-control {
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    border: 2px solid #eaecf4;
+}
+
+.form-control:focus {
+    border-color: #4e73df;
+    box-shadow: none;
+}
+
+.result-pill {
+    border-radius: 1.25rem;
+}
+
+.grade-banner {
+    transition: all 0.4s ease;
+}
+
+/* Dynamic Grade Classes */
+.bg-a { background-color: #d1e7dd; color: #0f5132; border: 2px solid #badbcc; }
+.bg-b { background-color: #cfe2ff; color: #084298; border: 2px solid #b6d4fe; }
+.bg-c { background-color: #fff3cd; color: #856404; border: 2px solid #ffeeba; }
+.bg-d { background-color: #e2e3e5; color: #41464b; border: 2px solid #d6d8db; }
+.bg-fail { background-color: #f8d7da; color: #842029; border: 2px solid #f5c2c7; }
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
