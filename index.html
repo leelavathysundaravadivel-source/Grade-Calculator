@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator | Assignment 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+<main class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card shadow-lg border-0 rounded-4 w-100" style="max-width: 600px;">
+        <div class="card-header bg-primary text-white text-center py-4 rounded-top-4">
+            <h2 class="fw-bold mb-0">Student Report Card</h2>
+            <small>All fields are mandatory (Range: 0-100)</small>
+        </div>
+        
+        <div class="card-body p-4 p-md-5">
+            <form id="gradeForm" class="row g-3 needs-validation" novalidate autocomplete="off">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Mathematics</label>
+                    <input type="number" id="sub1" class="form-control" min="0" max="100" required>
+                    <div class="invalid-feedback">Required (0-100).</div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Physics</label>
+                    <input type="number" id="sub2" class="form-control" min="0" max="100" required>
+                    <div class="invalid-feedback">Required (0-100).</div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Chemistry</label>
+                    <input type="number" id="sub3" class="form-control" min="0" max="100" required>
+                    <div class="invalid-feedback">Required (0-100).</div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">English</label>
+                    <input type="number" id="sub4" class="form-control" min="0" max="100" required>
+                    <div class="invalid-feedback">Required (0-100).</div>
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-bold">Computer Science</label>
+                    <input type="number" id="sub5" class="form-control" min="0" max="100" required>
+                    <div class="invalid-feedback">Required (0-100).</div>
+                </div>
+
+                <div class="col-12 d-flex gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg flex-grow-1 fw-bold">Calculate</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg" onclick="resetForm()">Reset</button>
+                </div>
+            </form>
+
+            <section id="resultSection" class="mt-5 d-none">
+                <div class="row text-center g-3">
+                    <div class="col-6">
+                        <div class="p-3 border rounded-3 bg-white">
+                            <small class="text-muted d-block">TOTAL</small>
+                            <span id="displayTotal" class="h4 fw-bold">0</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 border rounded-3 bg-white">
+                            <small class="text-muted d-block">AVERAGE</small>
+                            <span id="displayAvg" class="h4 fw-bold">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div id="gradeBox" class="p-3 rounded-4 border shadow-sm">
+                            <h2 class="mb-0 fw-bold">Grade: <span id="displayGrade">F</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<script src="js/index.js"></script>
+</body>
+</html>
